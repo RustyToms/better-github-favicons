@@ -7,8 +7,13 @@
     "page": "./background.html"
   },
   "options_page": "./options.html",
+  "web_accessible_resources": [
+    "icons/pr.ico",
+    "icons/pr_fail.ico",
+    "icons/pr_pass.ico"
+  ],
   "content_scripts": [{
-    "matches": ["https://*/*"],
+    "matches": ["https://github.com/*"],
     "js": ["jquery-1.9.1.min.js", "favicon.js"],
     "run_at": "document_idle"
   }]
