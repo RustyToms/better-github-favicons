@@ -3,10 +3,6 @@
   "name": "Better Github Favicons",
   "description": "Indicate PR status with colored favicons",
   "version": "0.1",
-  "background": {
-    "page": "./background.html"
-  },
-  "options_page": "./options.html",
   "web_accessible_resources": [
     "icons/pr.ico",
     "icons/pr_fail.ico",
