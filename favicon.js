@@ -1,5 +1,5 @@
 var prStatus = function(status) {
-  return $(".branch-status .status-description .text-" + status).length;
+  return $(".branch-status .text-" + status).length;
 };
 
 $("body").bind("DOMSubtreeModified", function() {
