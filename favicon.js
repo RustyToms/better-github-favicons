@@ -2,6 +2,10 @@ var prStatus = function(status) {
   return $(".branch-status .text-" + status).length;
 };
 
+var merged = function() {
+  return $(".state.state-merged").length;
+};
+
 $("body").bind("DOMSubtreeModified", function() {
   var link = document.querySelector("link[rel~='icon']");
 
@@ -9,6 +13,8 @@ $("body").bind("DOMSubtreeModified", function() {
 
   if($(".tabnav-pr").length) {
     var icon = "pr";
+
+    if(merged()) { icon = "pr_merged"; }
 
     if(prStatus("success")) { icon = "pr_pass"; }
     if(prStatus("failure")) { icon = "pr_fail"; }
