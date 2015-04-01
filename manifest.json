@@ -2,12 +2,13 @@
   "manifest_version": 2,
   "name": "Better Github Favicons",
   "description": "Indicate PR status with colored favicons",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "web_accessible_resources": [
     "icons/pr.ico",
     "icons/pr_fail.ico",
     "icons/pr_merged.ico",
-    "icons/pr_pass.ico"
+    "icons/pr_pass.ico",
+    "icons/pr_pending.ico"
   ],
   "icons": {
      "16": "logos/16.png",

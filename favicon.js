@@ -14,10 +14,13 @@ $("body").bind("DOMSubtreeModified", function() {
   if($(".tabnav-pr").length) {
     var icon = "pr";
 
-    if(merged()) { icon = "pr_merged"; }
-
-    if(prStatus("success")) { icon = "pr_pass"; }
-    if(prStatus("failure")) { icon = "pr_fail"; }
+    if(merged()) {
+      icon = "pr_merged";
+    } else {
+      if(prStatus("success")) { icon = "pr_pass"; }
+      if(prStatus("failure")) { icon = "pr_fail"; }
+      if(prStatus("pending")) { icon = "pr_pending"; }
+    }
 
     faviconUrl = chrome.extension.getURL("icons/" + icon + ".ico");
   }
